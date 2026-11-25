@@ -103,7 +103,7 @@
     showError('');
     if (!validate()) return;
     saveForm();
-    busy = true; $('.co-overlay').hidden = false; $('#pay-btn').disabled = true;
+    $('#pay-btn').disabled = true;
     try {
       const c = customer();
       const result = await tokenizer({
@@ -112,6 +112,8 @@
           addressLines: [c.address.line1, c.address.line2].filter(Boolean), city: c.address.city, state: c.address.state, postalCode: c.address.zip, countryCode: c.address.country },
       });
       if (result?.status !== 'OK' || !result.token) throw new Error(result?.errors?.[0]?.message ? `Please check your card details: ${result.errors[0].message}` : 'Please check your card details.');
+      // Only now — a real payment token exists — show the processing overlay and hit the server.
+      busy = true; $('.co-overlay').hidden = false;
       await charge(result.token);
     } catch (e) {
       busy = false; $('.co-overlay').hidden = true; $('#pay-btn').disabled = false;
