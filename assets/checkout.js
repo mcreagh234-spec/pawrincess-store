@@ -104,6 +104,7 @@
     if (!validate()) return;
     saveForm();
     $('#pay-btn').disabled = true;
+    let wd;
     try {
       const c = customer();
       const result = await tokenizer({
@@ -114,8 +115,11 @@
       if (result?.status !== 'OK' || !result.token) throw new Error(result?.errors?.[0]?.message ? `Please check your card details: ${result.errors[0].message}` : 'Please check your card details.');
       // Only now — a real payment token exists — show the processing overlay and hit the server.
       busy = true; $('.co-overlay').hidden = false;
+      wd = setTimeout(() => { busy = false; $('.co-overlay').hidden = true; $('#pay-btn').disabled = false; showError('This is taking longer than expected — please check your connection and try again.'); }, 30000);
       await charge(result.token);
+      clearTimeout(wd);
     } catch (e) {
+      clearTimeout(wd);
       busy = false; $('.co-overlay').hidden = true; $('#pay-btn').disabled = false;
       showError(e.message || 'Payment failed. Please try again.');
     }
@@ -139,11 +143,6 @@
       $('#card-container').innerHTML = '<div class="co-card-ph"><span>Card number</span><span>MM / YY</span><span>CVV</span><span>ZIP</span></div><p class="co-loading">The secure card form loads here once Square is connected.</p>';
       return;
     }
-    const req = () => payments.paymentRequest({ countryCode: 'US', currencyCode: 'USD', total: { amount: (totalCents / 100).toFixed(2), label: 'Pawrincess' } });
-    let any = false;
-    try { const gp = await payments.googlePay(req()); await gp.attach('#google-pay', { buttonColor: 'black', buttonSizeMode: 'fill', buttonType: 'plain' }); $('#google-pay').hidden = false; any = true; $('#google-pay').addEventListener('click', (e) => { e.preventDefault(); run(() => gp.tokenize()); }); } catch {}
-    try { const ap = await payments.applePay(req()); const el = $('#apple-pay'); el.innerHTML = '<button type="button" class="apple-btn" aria-label="Pay with Apple Pay"></button>'; el.hidden = false; any = true; el.firstChild.addEventListener('click', () => run(() => ap.tokenize())); } catch {}
-    if (any) $('.co-express').hidden = false;
   }
 
   async function boot() {
