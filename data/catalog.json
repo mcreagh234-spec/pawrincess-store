@@ -1,0 +1,34 @@
+{
+  "store": {
+    "name": "Pawrincess",
+    "currency": "USD",
+    "support_email": "support@pawrincess.store",
+    "shipping_options": [
+      { "id": "standard", "label": "Free Shipping", "eta": "4–9 business days", "price_cents": 0 },
+      { "id": "express", "label": "Express Shipping", "eta": "2–4 business days", "price_cents": 995 }
+    ]
+  },
+  "products": [
+    {
+      "handle": "pawrincess-seat",
+      "title": "The Pawrincess Seat",
+      "image": "images/life-night.jpg",
+      "variants": [
+        { "id": "bolster", "label": "Royal Bolster", "image": "images/variant-bolster.jpg" },
+        { "id": "crown", "label": "Princess Crown", "image": "images/variant-crown.jpg" }
+      ],
+      "bundles": {
+        "tiers": [
+          { "id": "1", "title": "1 Seat", "qty": 1, "price_cents": 4999, "compare_cents": 7999 },
+          { "id": "2", "title": "2 Seats", "qty": 2, "price_cents": 8999, "compare_cents": 15998 },
+          { "id": "3", "title": "3 Seats", "qty": 3, "price_cents": 12499, "compare_cents": 23997 }
+        ],
+        "addons": [
+          { "id": "shipping_protection", "title": "Shipping Protection", "price_cents": 295 },
+          { "id": "care_plus", "title": "Pawrincess Care+ — 1-year warranty", "price_cents": 595 },
+          { "id": "priority", "title": "Priority Processing", "price_cents": 499 }
+        ]
+      }
+    }
+  ]
+}

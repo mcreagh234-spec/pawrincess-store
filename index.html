@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pawrincess Seat — Her Royal Spot</title>
+<meta name="description" content="The Pawrincess Seat — a bedside dog bed that clamps to your bed so your little royal sleeps at mattress height, right within arm's reach.">
+<link rel="icon" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/pawrincess.css">
+</head>
+<body>
+
+<div class="announce">👑 30-DAY MONEY-BACK GUARANTEE · FREE SHIPPING WORLDWIDE</div>
+
+<header class="header">
+  <div class="bar">
+    <button class="hmenu" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <img class="logo-img" src="images/logo.png" alt="Pawrincess Seat">
+    <div class="hicons">
+      <button class="hicon" aria-label="Search">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <button class="hicon cartbtn" id="cartBtn" aria-label="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="bubble" id="cartBubble" hidden>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="product-top">
+  <!-- hero gallery -->
+  <div class="gallery">
+    <div class="g-track" id="gTrack">
+      <div class="g-slide"><img src="images/life-night.jpg" alt="Pawrincess Seat at the bedside at night" fetchpriority="high"></div>
+      <div class="g-slide"><img src="images/life-unbox.jpg" alt="Unboxing the Pawrincess Seat" loading="lazy"></div>
+      <div class="g-slide"><img src="images/box.jpg" alt="Pawrincess Seat retail box" loading="lazy"></div>
+    </div>
+    <button class="g-arr prev" id="gPrev" aria-label="Previous">‹</button>
+    <button class="g-arr next" id="gNext" aria-label="Next">›</button>
+    <div class="g-dots" id="gDots"></div>
+  </div>
+
+  <!-- buy box -->
+  <div class="buy">
+    <h1>The Pawrincess Seat</h1>
+    <div class="rating-row"><span class="stars">★★★★★</span><span class="cnt" id="ratingCnt">4.9 (128 Reviews)</span></div>
+    <p class="tagline">Her own throne. Right next to yours. No more paws in your face at 3am.</p>
+    <div class="price-row">
+      <span class="price">$49.99</span>
+      <span class="compare">$79.99</span>
+      <span class="save">🏷️ SAVE 37%</span>
+    </div>
+
+    <div class="callout"><span class="ic">🐾</span><span>Fits wood &amp; metal beds with a side rail · pets up to 40 lb</span></div>
+
+    <ul class="bullets">
+      <li><span class="ic">💗</span> Sleeps at mattress height, within arm's reach</li>
+      <li><span class="ic">⏱️</span> Clamps on in ~2 min, no tools</li>
+      <li><span class="ic">🧺</span> Ultra-soft crown-print sherpa, machine-washable</li>
+    </ul>
+
+    <!-- bundles -->
+    <div class="divider-h">SNUGGLE CLOSER, SAVE MORE</div>
+    <div class="tiers" id="tiers">
+      <div class="tier sel" data-tier="1" data-price="49.99" data-compare="79.99" data-qty="1" data-name="1 Pawrincess Seat">
+        <div class="tier-main">
+          <span class="radio"></span>
+          <div class="tier-info"><div class="t-name">1 Seat</div><div class="t-sub">For your little royal</div>
+            <div class="vsel"><label>Choose your style</label><select class="vSelect"><option value="bolster">Royal Bolster 👑</option><option value="crown">Princess Crown 👑</option></select></div>
+          </div>
+          <div class="tier-price"><div class="tp">$49.99</div><div class="tc">$79.99</div></div>
+        </div>
+        <div class="addons">
+          <label class="addon on" data-addon="2.95" data-aid="shipping_protection"><span class="box">✓</span><span class="ico">📦</span>+ Shipping Protection — lost or damaged? We reship free.<span class="ap">$2.95</span></label>
+          <label class="addon" data-addon="5.95" data-aid="care_plus"><span class="box">✓</span><span class="ico">👑</span>+ Pawrincess Care+ — 1-year warranty, free replacement<span class="ap">$5.95</span></label>
+        </div>
+      </div>
+      <div class="tier" data-tier="2" data-price="89.99" data-compare="159.98" data-qty="2" data-name="2 Pawrincess Seats">
+        <div class="tier-main">
+          <span class="radio"></span>
+          <div class="tier-info"><div class="t-name">2 Seats <span class="badge">MOST POPULAR</span></div><div class="t-sub">One for each side, or each pet</div>
+            <div class="vsel"><label>Choose your style</label><select class="vSelect"><option value="bolster">Royal Bolster 👑</option><option value="crown">Princess Crown 👑</option></select></div>
+          </div>
+          <div class="tier-price"><div class="tp">$89.99</div><div class="tc">$159.98</div></div>
+        </div>
+        <div class="tier-free"><span class="ico">🎁</span>FREE Pawrincess Care+ — 1-year coverage<span class="ap">$5.95</span></div>
+      </div>
+      <div class="tier" data-tier="3" data-price="124.99" data-compare="239.97" data-qty="3" data-name="3 Pawrincess Seats">
+        <div class="tier-main">
+          <span class="radio"></span>
+          <div class="tier-info"><div class="t-name">3 Seats <span class="badge gift">GIFT PACK</span></div><div class="t-sub">One for you, two to gift a pet-mom friend</div>
+            <div class="vsel"><label>Choose your style</label><select class="vSelect"><option value="bolster">Royal Bolster 👑</option><option value="crown">Princess Crown 👑</option></select></div>
+          </div>
+          <div class="tier-price"><div class="tp">$124.99</div><div class="tc">$239.97</div></div>
+        </div>
+        <div class="tier-free"><span class="ico">🎁</span>FREE Pawrincess Care+ — 1-year coverage<span class="ap">$5.95</span></div>
+      </div>
+    </div>
+
+    <label class="addon" id="priority" data-addon="4.99" data-aid="priority" style="border:1.5px solid var(--line);border-radius:14px;margin-bottom:16px">
+      <span class="box">✓</span><span class="ico">⚡</span>Priority Processing — your order is packed &amp; shipped first<span class="ap">$4.99</span>
+    </label>
+
+    <button class="atc row" id="atcMain">ADD TO CART · $57.93</button>
+
+    <!-- delivery -->
+    <div class="deliv">
+      <div class="d"><b>Today</b><span>Ordered</span></div>
+      <div class="d"><b>Nov 26–30</b><span>Ships</span></div>
+      <div class="d"><b>Dec 4–16</b><span>Delivered</span></div>
+    </div>
+    <div class="ship-line"><span class="ic">🚚</span><span>Free shipping · Order by Dec 2 → arrives before Christmas</span></div>
+    <div class="ship-line"><span class="ic">🛡️</span><span>30-Night Snuggle Guarantee</span></div>
+
+    <div class="pays">
+      <img src="images/pay/visa.svg" alt="Visa"><img src="images/pay/master.svg" alt="Mastercard">
+      <img src="images/pay/american_express.svg" alt="Amex"><img src="images/pay/apple_pay.svg" alt="Apple Pay">
+      <img src="images/pay/google_pay.svg" alt="Google Pay"><img src="images/pay/discover.svg" alt="Discover">
+      <img src="images/pay/diners_club.svg" alt="Diners"><img src="images/pay/cashapppay.svg" alt="Cash App">
+    </div>
+
+    <!-- featured review -->
+    <div class="freview">
+      <img src="images/life-night.jpg" alt="Happy customer's dog">
+      <div>
+        <div class="q">"My Cavalier used to steal my pillow every night. Now she hops into her own little throne and I can reach over and pet her back to sleep."</div>
+        <div class="who">Megan R. <span class="stars">★★★★★</span></div>
+      </div>
+    </div>
+
+    <!-- accordions -->
+    <div class="acc" style="margin-top:18px">
+      <div class="acc-item"><button class="acc-q">📏 Size &amp; fit<span class="chev">▾</span></button><div class="acc-a"><p>Sleeping area 23×18". Fits bed side rails up to 2.3" thick. Supports pets up to 40 lb — ideal for small and medium breeds and most cats.</p></div></div>
+      <div class="acc-item"><button class="acc-q">📦 What's in the box<span class="chev">▾</span></button><div class="acc-a"><p>One Pawrincess Seat frame, two U-clamps with twist knobs, the removable crown-print sherpa cover, and a quick-start card. No tools needed.</p></div></div>
+      <div class="acc-item"><button class="acc-q">🚚 Shipping &amp; returns<span class="chev">▾</span></button><div class="acc-a"><p>Free worldwide shipping. Ships in 1–3 business days. 30-night money-back guarantee — if your pup doesn't love it, send it back.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- comparison -->
+<section class="section band center">
+  <div class="wrap">
+    <h2>Close enough to cuddle.<br>Far enough to sleep.</h2>
+    <p class="sub">The middle ground between "on the floor" and "on your face".</p>
+    <table class="cmp">
+      <tr><th></th><th>Floor bed</th><th>In your bed</th><th class="hl head">Pawrincess</th></tr>
+      <tr><td>Pet feels close to you</td><td class="no">✗</td><td class="yes">✓</td><td class="hl"><span class="yes">✓</span></td></tr>
+      <tr><td>You get your space back</td><td class="yes">✓</td><td class="no">✗</td><td class="hl"><span class="yes">✓</span></td></tr>
+      <tr><td>No hair on your sheets</td><td class="yes">✓</td><td class="no">✗</td><td class="hl"><span class="yes">✓</span></td></tr>
+      <tr><td>No 3am wake-ups</td><td class="no">✗</td><td class="no">✗</td><td class="hl"><span class="yes">✓</span></td></tr>
+      <tr><td>Easy for small &amp; senior pets</td><td class="yes">✓</td><td class="no">✗</td><td class="hl"><span class="yes">✓</span></td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- steps -->
+<section class="section center">
+  <div class="wrap">
+    <h2>Set up in 2 minutes</h2>
+    <p class="sub">No tools, no drilling. Just clamp, fluff and snuggle.</p>
+    <div class="step-grid" style="text-align:left">
+      <div class="step">
+        <img src="images/step-clamp.jpg" alt="Clamp it onto your bed rail" loading="lazy">
+        <div class="snum">1</div><h3>Clamp it</h3>
+        <p>Hook the 2 U-clamps over your bed's side rail and twist the knobs tight.</p>
+      </div>
+      <div class="step">
+        <img src="images/step-fluff.jpg" alt="Fluff on the crown-print cover" loading="lazy">
+        <div class="snum">2</div><h3>Fluff it</h3>
+        <p>Slip the crown-print sherpa cover on. It sits level with your mattress.</p>
+      </div>
+      <div class="step">
+        <img src="images/life-unbox.jpg" alt="Snuggle in">
+        <div class="snum">3</div><h3>Snuggle</h3>
+        <p>Your little royal hops in. You reach over. Everyone sleeps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- near you -->
+<section class="section band">
+  <div class="wrap">
+    <img class="ny-img" src="images/life-night.jpg" alt="Dog resting in the Pawrincess Seat beside the bed">
+    <h2>They just want to be near you</h2>
+    <p>Dogs and cats are pack animals: most of them sleep better when they can see and smell you. The Pawrincess Seat gives her that — without giving up your pillow.</p>
+    <div class="cards2">
+      <div class="card"><h3>Arm's reach</h3><p>Pet her back to sleep without getting up.</p></div>
+      <div class="card"><h3>Your bed, back</h3><p>No more sleeping curled around a dog.</p></div>
+      <div class="card"><h3>Washable</h3><p>The sherpa cover comes off and goes in the machine.</p></div>
+      <div class="card"><h3>Dogs &amp; cats</h3><p>Small and medium breeds and most cats.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- specs -->
+<section class="section center">
+  <div class="wrap">
+    <h2>Will it fit my bed?</h2>
+    <p class="sub">Check this before ordering. It takes 10 seconds and saves a return.</p>
+    <div class="stats">
+      <div class="stat"><b>23×18"</b><span>Sleeping area</span></div>
+      <div class="stat"><b>2.3"</b><span>Max rail thickness</span></div>
+      <div class="stat"><b>40 lb</b><span>Max pet weight</span></div>
+      <div class="stat"><b>2 min</b><span>Setup, no tools</span></div>
+    </div>
+    <div class="wbox good" style="text-align:left"><h3>✓ Works with</h3><p>Wood or metal bed frames that have a side rail, including platform beds with a rail. Great for Frenchies, Cavaliers, Yorkies, Maltese, Chihuahuas, Dachshunds and most cats.</p></div>
+    <div class="wbox bad" style="text-align:left"><h3>✗ Not for</h3><p>Fully upholstered (fabric-covered) frames, box springs or divans without a rail, or pets over 40 lb.</p></div>
+  </div>
+</section>
+
+<!-- reviews -->
+<section class="section band center">
+  <div class="wrap">
+    <h2>What pet parents are saying</h2>
+    <div class="rev-sum">
+      <div class="big">4.9</div>
+      <div class="stars">★★★★★</div>
+      <div class="based">Based on 128 reviews</div>
+      <div class="bars">
+        <div class="bar"><span class="lab">5★</span><span class="track"><span class="fill" style="width:88%"></span></span><span class="pct">88%</span></div>
+        <div class="bar"><span class="lab">4★</span><span class="track"><span class="fill" style="width:9%"></span></span><span class="pct">9%</span></div>
+        <div class="bar"><span class="lab">3★</span><span class="track"><span class="fill" style="width:2%"></span></span><span class="pct">2%</span></div>
+        <div class="bar"><span class="lab">2★</span><span class="track"><span class="fill" style="width:1%"></span></span><span class="pct">1%</span></div>
+        <div class="bar"><span class="lab">1★</span><span class="track"><span class="fill" style="width:0%"></span></span><span class="pct">0%</span></div>
+      </div>
+    </div>
+    <div class="rev-photos">
+      <img src="images/life-night.jpg" alt="Customer photo" loading="lazy">
+      <img src="images/life-unbox.jpg" alt="Customer photo" loading="lazy">
+      <img src="images/box.jpg" alt="Customer photo" loading="lazy">
+      <img src="images/life-night.jpg" alt="Customer photo" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- faq -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="center">Questions? We've got you.</h2>
+    <div class="acc" style="margin-top:20px">
+      <div class="acc-item"><button class="acc-q"><span class="ck">☑</span> Will it fit my bed?<span class="chev">▾</span></button><div class="acc-a"><p>It works with wood or metal frames that have a side rail up to 2.3" thick, including most platform beds. Not for fully upholstered frames or divans with no rail.</p></div></div>
+      <div class="acc-item"><button class="acc-q"><span class="ck">☑</span> How big a pet can use it?<span class="chev">▾</span></button><div class="acc-a"><p>Up to 40 lb. The 23×18" sleeping area is ideal for small and medium breeds and most cats.</p></div></div>
+      <div class="acc-item"><button class="acc-q"><span class="ck">☑</span> Is it stable? Will it tip?<span class="chev">▾</span></button><div class="acc-a"><p>The two U-clamps lock onto your side rail and the frame rests against the bed, so it stays level and secure within the weight limit.</p></div></div>
+      <div class="acc-item"><button class="acc-q"><span class="ck">☑</span> Do I need tools?<span class="chev">▾</span></button><div class="acc-a"><p>No tools and no drilling. Hook the clamps over the rail and hand-tighten the knobs — about 2 minutes.</p></div></div>
+      <div class="acc-item"><button class="acc-q"><span class="ck">☑</span> Can I wash it?<span class="chev">▾</span></button><div class="acc-a"><p>Yes — the crown-print sherpa cover zips off and is machine-washable.</p></div></div>
+      <div class="acc-item"><button class="acc-q"><span class="ck">☑</span> Will my pet actually use it?<span class="chev">▾</span></button><div class="acc-a"><p>Most pets settle in fast because they're right beside you at mattress height. If yours doesn't love it, you're covered by the 30-night guarantee.</p></div></div>
+      <div class="acc-item"><button class="acc-q"><span class="ck">☑</span> When will it arrive? Before Christmas?<span class="chev">▾</span></button><div class="acc-a"><p>Order by Dec 2 for delivery before Christmas. Standard delivery is Dec 4–16.</p></div></div>
+      <div class="acc-item"><button class="acc-q"><span class="ck">☑</span> What if I don't love it?<span class="chev">▾</span></button><div class="acc-a"><p>30-night money-back guarantee. Return it for a full refund, no drama.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <h3>Join the royal court 👑</h3>
+  <p style="color:rgba(255,255,255,.8);margin:0">Subscribe for drops, deals and very good dogs.</p>
+  <form class="sub-in" onsubmit="return false">
+    <input type="email" placeholder="Your email" aria-label="Email">
+    <button class="go">Join</button>
+  </form>
+  <div class="fine">© 2026 Pawrincess · Her Royal Spot · 30-Day Money-Back Guarantee</div>
+</footer>
+
+<!-- sticky buy bar -->
+<div class="sticky">
+  <div class="sp"><b>The Pawrincess Seat</b><span class="pp" id="stickyPrice">$49.99</span><span class="cc">$79.99</span></div>
+  <button class="sbtn" id="atcSticky">Add to cart</button>
+</div>
+<button class="to-top" id="toTop" aria-label="Back to top">⌃</button>
+
+<!-- cart -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Cart">
+  <div class="drawer-head"><h3>Your cart 👑</h3><button class="x" id="cartClose">✕</button></div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot">
+    <div class="tot"><span>Total</span><span id="cartTotal">$0.00</span></div>
+    <button class="co" id="checkoutBtn">Checkout</button>
+    <button class="cont" id="keepShopping">Continue shopping</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/pawrincess.js"></script>
+</body>
+</html>
