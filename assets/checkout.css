@@ -32,13 +32,17 @@
 .co-ship-price{color:var(--ink)}
 
 /* payment */
-.co-pay{border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
-.co-pay-head{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--pink-tint);border-bottom:1px solid var(--line)}
-.co-pay-head span:first-child{font-weight:600;color:var(--ink)}
-.co-cards img{height:22px;margin-left:4px;vertical-align:middle}
-.co-pay-body{padding:14px}
+.co-pay{border:1.5px solid var(--brand);border-radius:14px;overflow:hidden;background:var(--panel);box-shadow:0 8px 22px rgba(194,30,86,.08)}
+.co-pay-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:15px 16px;background:var(--pink-tint);border-bottom:1px solid var(--line)}
+.co-pay-head .lbl{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);font-size:1.02rem}
+.co-pay-head .lbl .dot{width:18px;height:18px;border-radius:50%;border:2px solid var(--brand);position:relative;flex:none}
+.co-pay-head .lbl .dot::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--brand)}
+.co-cards{display:inline-flex;align-items:center;gap:6px;flex:none}
+.co-cards img{height:30px;width:42px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:6px;padding:3px 5px;box-shadow:0 1px 2px rgba(0,0,0,.07)}
+.co-pay-body{padding:18px 16px}
 #card-container{min-height:48px}
-.co-loading{color:var(--muted);font-size:.9rem;margin:8px 0}
+.co-loading{color:var(--muted);font-size:.9rem;margin:10px 0;text-align:center}
+@media(max-width:400px){.co-cards img{height:26px;width:36px}.co-pay-head .lbl{font-size:.95rem}}
 .co-card-ph{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted)}
 .co-card-ph span{border:1px dashed var(--line);border-radius:8px;padding:10px 14px;font-size:.85rem}
 
