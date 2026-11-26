@@ -21,6 +21,7 @@
   --shadow:0 10px 30px rgba(140,20,70,.08);
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{
   margin:0;background:var(--cream);color:var(--body);
